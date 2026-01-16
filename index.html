@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المرجع الذهبي - كيمياء عبدالرحمن الفيتوري</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --bg: #f4f7f6;
+        }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .student-name {
+            font-size: 1.5em;
+            background: rgba(255,255,255,0.2);
+            display: inline-block;
+            padding: 5px 20px;
+            border-radius: 50px;
+            margin-top: 10px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-right: 8px solid var(--secondary);
+        }
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .mermaid {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        th {
+            background-color: var(--secondary);
+            color: white;
+        }
+        .highlight {
+            color: var(--accent);
+            font-weight: bold;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 0.9em;
+        }
+        .badge {
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            color: white;
+            margin: 2px;
+        }
+        .activating { background-color: var(--success); }
+        .deactivating { background-color: var(--accent); }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>🚀 الموسوعة الشاملة للكيمياء العضوية والعامة</h1>
+    <div class="student-name">إعداد الطالب: عبدالرحمن الفيتوري</div>
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <h2>🔬 1. أساسيات الكيمياء العامة (Matter)</h2>
+        <p>هذا المخطط يلخص الفصل الأول بالكامل (تصنيف المادة):</p>
+        <div class="mermaid">
+        graph TD
+            M[المادة - Matter] --> P[مادة نقية - Pure]
+            M --> Mix[مخلوط - Mixture]
+            P --> E[عناصر - Elements]
+            P --> C[مركبات - Compounds]
+            Mix --> Hom[متجانس - Homogeneous]
+            Mix --> Het[غير متجانس - Heterogeneous]
+            style E fill:#d1e7dd
+            style C fill:#d1e7dd
+            style Hom fill:#fff3cd
+            style Het fill:#fff3cd
+        </div>
+        <div style="margin-top: 15px;">
+            <strong>💡 تذكر:</strong> المركب يمكن فصله <i>كيميائياً</i> فقط، بينما المخلوط يمكن فصله <i>فيزيائياً</i>.
+        </div>
+    </div>
+
+    <div class="card" style="border-right-color: #9b59b6;">
+        <h2>عالم البنزين (Aromaticity & Orientation)</h2>
+        <p>مفتاح حل أسئلة الاستبدال (أين تذهب المجموعة الثانية؟):</p>
+        <table>
+            <tr>
+                <th>النوع</th>
+                <th>المجموعات</th>
+                <th>التوجيه</th>
+                <th>التأثير على الحلقة</th>
+            </tr>
+            <tr style="background-color: #f1fcf1;">
+                <td>منشطة (Activating)</td>
+                <td>-OH, -NH2, -R (Alkyl)</td>
+                <td class="highlight">Ortho / Para</td>
+                <td><span class="badge activating">تسرع التفاعل</span></td>
+            </tr>
+            <tr style="background-color: #fdf2f2;">
+                <td>مثبطة (Deactivating)</td>
+                <td>-NO2, -COOH, -CHO, -CN</td>
+                <td class="highlight">Meta</td>
+                <td><span class="badge deactivating">تبطئ التفاعل</span></td>
+            </tr>
+            <tr>
+                <td>الهالوجينات</td>
+                <td>-Cl, -Br, -I</td>
+                <td class="highlight">Ortho / Para</td>
+                <td><span class="badge deactivating">مثبطة (حالة خاصة)</span></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="card" style="border-right-color: #27ae60;">
+        <h2>⚗️ خريطة التحولات (The Master Map)</h2>
+        <p>هذه الخريطة تربط الكحولات، الألدهيدات، الأحماض، والمشتقات ببعضها:</p>
+        <div class="mermaid">
+        graph LR
+            A[كحول 1°] -- "KMnO4 (أكسدة)" --> B[ألدهيد]
+            B -- "أكسدة" --> C[حمض كربوكسيلي]
+            C -- "LiAlH4 (اختزال)" --> A
+            
+            D[كحول 2°] -- "أكسدة" --> E[كيتون]
+            E -- "LiAlH4 / NaBH4" --> D
+            
+            C -- "Alcohol / H+" --> F[إستر - Ester]
+            C -- "SOCl2" --> G[أسيل كلوريد]
+            G -- "Ammonia" --> H[أميد - Amide]
+            H -- "LiAlH4" --> I[أمين - Amine]
+            
+            style C fill:#f9d5e5
+            style B fill:#eeeeff
+            style E fill:#eeeeff
+        </div>
+    </div>
+
+    <div class="card" style="border-right-color: #f39c12;">
+        <h2>🧪 اختبارات التمييز (Lab Identification)</h2>
+        <table>
+            <tr>
+                <th>المادة المراد كشفها</th>
+                <th>الكاشف المستخدم</th>
+                <th>المشاهدة (النتيجة)</th>
+            </tr>
+            <tr>
+                <td>الألدهيدات (فقط)</td>
+                <td>Tollens Reagent</td>
+                <td><span class="highlight">Silver Mirror (مرآة فضية)</span></td>
+            </tr>
+            <tr>
+                <td>الأحماض الكربوكسيلية</td>
+                <td>NaHCO3 (بيكربونات)</td>
+                <td><span class="highlight">Effervescence (فوران CO2)</span></td>
+            </tr>
+            <tr>
+                <td>تصنيف الكحولات</td>
+                <td>Lucas Reagent</td>
+                <td>الثالثي (فوري)، الثانوي (5 دقائق)، الأولي (لا يتفاعل)</td>
+            </tr>
+            <tr>
+                <td>الفينولات</td>
+                <td>FeCl3</td>
+                <td>Violet Color (لون بنفسجي)</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="card" style="border-right-color: #34495e;">
+        <h2>📝 ملاحظات ختامية للدفعة</h2>
+        <ul style="line-height: 2;">
+            <li><strong>التهجين:</strong> الكربونيل (C=O) دائماً <b>sp2</b> والزاوية <b>120°</b>.</li>
+            <li><strong>الحامضية:</strong> الأحماض الكربوكسيلية > الفينولات > الكحولات.</li>
+            <li><strong>تأثير الحث:</strong> وجود ذرة كلور (Cl) بجانب مجموعة الـ COOH تزيد الحامضية بقوة.</li>
+            <li><strong>الاختزال:</strong> كاشف <b>NaBH4</b> لطيف، يختزل الألدهيد والكيتون فقط ولا يلمس الأحماض.</li>
+            <li><strong>الأميدات:</strong> هي الأكثر استقراراً والأقل نشاطاً بين جميع مشتقات الأحماض.</li>
+        </ul>
+    </div>
+
+</div>
+
+<div class="footer">
+    تم الإعداد للمراجعة النهائية - دفعة 2025/2026<br>
+    <strong>إعداد الطالب: عبدالرحمن الفيتوري</strong>
+</div>
+
+<script>
+    mermaid.initialize({ 
+        startOnLoad: true, 
+        theme: 'neutral',
+        flowchart: { curve: 'stepBefore' }
+    });
+</script>
+
+</body>
+</html>
