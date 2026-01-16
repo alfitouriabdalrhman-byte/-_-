@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>خلاصة تفاعلات العضوية - عبدالرحمن الفيتوري</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8f9fa; padding: 20px; color: #212529; }
+        .header { text-align: center; padding: 20px; background: #2c3e50; color: white; border-radius: 10px; margin-bottom: 30px; }
+        .sheet-section { background: white; border: 2px solid #dee2e6; border-radius: 10px; padding: 20px; margin-bottom: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        h2 { color: #d35400; border-bottom: 2px solid #e67e22; padding-bottom: 10px; }
+        .notes { background: #fff9db; border-right: 5px solid #fcc419; padding: 15px; margin-top: 15px; border-radius: 5px; }
+        .mermaid { display: flex; justify-content: center; background: #fafafa; padding: 15px; border-radius: 8px; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>🧪 ملخص تفاعلات الكيمياء العضوية (من الشيتات فقط)</h1>
+    <h3>إعداد الطالب: عبدالرحمن الفيتوري</h3>
+</div>
+
+<div class="sheet-section">
+    <h2>📂 الشيت الثاني: الهيدروكربونات الأروماتية (البنزين)</h2>
+    <div class="mermaid">
+    graph TD
+        Benz[بنزين C6H6] -- "Nitration (HNO3/H2SO4)" --> Nit["نيتروبنزين (-NO2)"]
+        Benz -- "Halogenation (X2/FeX3)" --> Hal["هالو بنزين (-Cl / -Br)"]
+        Benz -- "Alkylation (R-Cl/AlCl3)" --> Alk["ألكيل بنزين (Toluene)"]
+        Alk -- "Oxidation (KMnO4/H+)" --> Acid["حمض بنزويك (COOH)"]
+    </div>
+    <div class="notes">
+        <strong>📝 ملاحظات الشيت:</strong>
+        <ul>
+            <li>تفاعلات البنزين هي <b>استبدال إلكتروفيلي</b> للحفاظ على استقرار الحلقة.</li>
+            <li>أكسدة السلسلة الجانبية (Side-chain) تحول أي مجموعة ألكيل إلى <b>-COOH</b> مهما كان طولها.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="sheet-section">
+    <h2>📂 الشيت الثالث: الكحولات، الفينولات، والإيثرات</h2>
+    <div class="mermaid">
+    graph LR
+        subgraph Alcohols
+        A1[كحول 1°] -- "[O] أكسدة" --> Ald[ألدهيد] -- "[O]" --> Carb[حمض]
+        A2[كحول 2°] -- "[O] أكسدة" --> Ket[كيتون]
+        A3[كحول 3°] -- "[O]" --> No["لا يتفاعل (لعدم وجود H على كربون OH)"]
+        end
+        
+        subgraph Phenols
+        Ph[فينول] -- "Br2 / H2O" --> Tri["2,4,6-tribromophenol (راسب)"]
+        Ph -- "Br2 / CS2" --> OP["Ortho + Para mixture"]
+        end
+    </div>
+    <div class="notes">
+        <strong>📝 ملاحظات الشيت:</strong>
+        <ul>
+            <li><b>نزع الماء (Dehydration):</b> عند 180° يعطي ألكين، وعند 140° يعطي إيثر.</li>
+            <li><b>اختبار لوكاس (Lucas Test):</b> الثالثي يتفاعل فوراً، الثانوي (5 دقائق)، الأولي (لا يتفاعل حرارياً).</li>
+            <li><b>الفينول:</b> يتأثر بنوع المذيب (Protic vs Aprotic) عند الهلجنة.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="sheet-section">
+    <h2>📂 الشيت الرابع: الألدهيدات والكيتونات</h2>
+    <div class="mermaid">
+    graph TD
+        Carbonyl[مجموعة الكربونيل] -- "LiAlH4 / NaBH4 (اختزال)" --> Alc["كحول (أولي أو ثانوي)"]
+        Ald[ألدهيد] -- "Tollens Test" --> Silver["مرآة فضية (Silver Mirror)"]
+        Ket[كيتون] -- "Tollens Test" --> NoReaction["لا يتفاعل (للتمييز)"]
+        Alpha["2 جزيء (Alpha-H)"] -- "Base / Heat" --> Aldol["تكاثف الألدول (Aldol)"]
+    </div>
+    <div class="notes">
+        <strong>📝 ملاحظات الشيت:</strong>
+        <ul>
+            <li><b>التهجين:</b> كربون الكربونيل <b>sp2</b> والزاوية <b>120°</b>.</li>
+            <li><b>Aldol Condensation:</b> يتطلب ضرورة وجود ذرة هيدروجين في الموضع <b>Alpha</b>.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="sheet-section">
+    <h2>📂 الشيت الخامس: الأحماض الكربوكسيلية ومشتقاتها</h2>
+    <div class="mermaid">
+    graph TD
+        Acid[حمض R-COOH] -- "Alcohol / H+" --> Est["إستر (Esterification)"]
+        Acid -- "SOCl2" --> Acyl["أسيل كلوريد R-COCl"]
+        Acyl -- "NH3 (أمونيا)" --> Amide["أميد R-CONH2"]
+        Amide -- "LiAlH4 (اختزال)" --> Amine["أمين R-CH2NH2"]
+        Est -- "NaOH / Heat" --> Soap["تصبن (Saponification)"]
+    </div>
+    <div class="notes">
+        <strong>📝 ملاحظات الشيت:</strong>
+        <ul>
+            <li><b>كاشف الحامضية:</b> تتفاعل الأحماض مع <b>NaHCO3</b> لتعطي فوران (CO2).</li>
+            <li><b>اختزال الأميدات:</b> باستخدام LiAlH4 يعطي أمينات (تتحول C=O إلى CH2).</li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    mermaid.initialize({ startOnLoad: true, theme: 'default' });
+</script>
+
+</body>
+</html>
